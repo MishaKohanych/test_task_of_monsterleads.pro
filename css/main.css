@@ -1,0 +1,340 @@
+@charset 'UTF-8';
+@font-face {
+    font-family: TheSerifYotaW5Plain;
+    src: url(fonts/theserifyota-w5plain.woff);
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнул¤ем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устран¤ем отступы между ¤чейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию дл¤ элементов форм (в частности дл¤ checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы дл¤ текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #333333;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-width: 320px;
+	min-height:100%;
+	font-family: 'PT Sans', sans-serif;
+	background: #f6f9ff;
+}
+a, a:visited { /* пор¤док правил дл¤ ссылок имеет значение */
+	color: #949494;
+	text-decoration: none;
+	-webkit-transition:all 0.3s linear;
+	   -moz-transition:all 0.3s linear;
+	     -o-transition:all 0.3s linear;
+	        transition:all 0.3s linear;
+}
+a:hover {
+	color: #0067a6;
+	text-decoration: underline;
+}
+a:focus, a:active {
+	color: #0067a6;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1.5em;
+	font-weight:600;
+	margin-bottom: .5em;
+}
+p {
+    margin-bottom: 1.5em;
+}
+
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+.center-block {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.top-header {
+	width: 100%;
+	height: auto;
+	background: #182c33;
+}
+.logo {
+	font-family: TheSerifYotaW5Plain, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 56px;
+	background: linear-gradient(#fff, #a3bfc1);
+	-webkit-background-clip: text;
+	color: transparent;
+	float: left;
+}
+.logo span:last-child {
+	font-size: .4em;
+}
+.img-logo {
+	float: left;
+	width: 67px;
+	height: 62px;
+	margin-right: .5em;
+	background: url(../img/logo.png) no-repeat  0 0;
+}
+.top-menu {
+	display: inline-block;
+	float: right;
+}
+.top-menu ul li {
+	display: inline-block;
+	float: left;
+	line-height: 3.9em;
+}
+.top-menu ul li a {
+	font-size: 1em;
+	text-decoration: none;
+	color: #bad0b8;
+	padding: .9em;
+}
+.top-menu ul li a:hover, .top-menu ul li a.active {
+    text-decoration: none;
+    border-radius: 1.5em;
+    background-color: #213942;
+    color: #ffba3c;
+}
+
+.header-bg {
+	display: table;
+	width: 100%;
+	height: 10em;
+	background: url(../img/header_bg.jpg)repeat-x 50% 0;
+	vertical-align: 50%;
+}
+.header-bg>h1 {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: TheSerifYotaW5Plain, serif;
+	font-size: 2.2em;
+	font-weight: 100;
+	color: #ffffff;
+}
+
+main {
+	width: 74%;
+	float: left;
+	position: relative;
+	top:-1.8em;
+	padding-left: 30px;
+}
+main p img {
+	margin-left: -30px;
+	width: 100%;
+	height: auto;
+}
+.public {
+	width: 100%;
+	height: auto;
+	position: relative;
+	border-bottom: 1px solid #cad3dc;
+	padding-bottom: 30px;
+	margin-bottom: 35px;
+}
+.public .img_public {
+	position: relative;
+	min-height: 310px;
+	margin-left: -30px;
+	margin-bottom: 1.2em;
+}
+.public .bg_img_public {
+	background-size: cover;
+	background-position: center center; 
+	position: absolute;
+	left: 0;	
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.date-public {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	background:#337e99;
+	color:#fff;
+	font-size: 1.2em;
+	line-height: 1em;
+	text-align:center;
+	padding: .4em .8em;
+	-webkit-transition: background 0.2s linear;
+	-moz-transition: background 0.2s linear;
+	-o-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+}
+.date-public span {
+	font-size:.6em;
+	color: #9bc0ce;
+}
+.public .img_public a:hover + .date-public {
+	background: #3f9aba;
+}
+.public .category a {
+	margin: .75em 1em 1em 0;
+}
+.public .title-public {
+	font-family: TheSerifYotaW5Plain, sans-serif;
+	font-size: 2em;
+	line-height: 1.2;
+	margin-bottom: .5em;
+}
+.public .title-public a {
+	color: #333333;
+}
+
+.public .last-comment .views, .public .last-comment .comments {
+	font-size: .7em;
+	color: #bbbbbb;
+	padding-left: 1.8em;
+	margin-right: 1.2em;
+	display: inline-block;
+}
+.public .last-comment .views {
+	background: url(../img/views.png) no-repeat 0 2px;
+}
+.public .last-comment .comments {
+	background: url(../img/comments.png) no-repeat 0 0;
+}
+
+/* КОМЕНТАРИИ */
+
+aside {
+	float: right;
+	width: 21%;
+}
+aside .widget {
+	margin-bottom: 2em;
+}
+.fb-widget img {
+	width: 100%;
+}
+.menu-category  {
+	border-bottom: 1px solid #cad3dc;
+}
+.menu-category li {
+	width: 100%;
+	border-top: 1px solid #cad3dc;
+	
+}
+.menu-category li a {
+	display: block;
+	font-size: 1em;
+	text-decoration: none;
+	color: #0067a6;
+	padding: 1em .75em;
+	
+}
+.menu-category li a:hover, .menu-category li a.active {
+    background-color: #90b0be;
+    color: #fff;
+}
+
+
+footer {
+	background: #fff;
+	padding: 4.5em 4.5em 4.5em 0;
+	overflow: hidden;
+}
+footer .copyright {
+	float: left;
+	color: #cacacb;
+	margin-top:5px; 
+}
+footer .skype {
+	float: left;
+	margin-left: 30%;
+}
+footer .pay_systems {
+	float: left;
+	margin-left: 7%;
+}
+footer .pay_systems a:first-child {
+	margin-right: 10px
+}
+
+
+@media screen and (max-width: 875px) {
+	.top-header {
+		text-align: center;
+	}    
+	.logo, .top-menu {
+		display: inline-block;
+		float: none;
+	}
+	.top-menu ul {
+		display: inline-block;
+		text-align: center;}
+	.top-menu ul li {
+		float: none;
+	}
+}
