@@ -1,1 +1,1 @@
-# test_task_of_monsterleads.pro
+# West task of monsterleads.pro
