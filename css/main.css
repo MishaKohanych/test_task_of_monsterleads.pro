@@ -97,7 +97,7 @@ a:focus, a:active {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1.5em;
-	font-weight:600;
+	font-weight:400;
 	margin-bottom: .5em;
 }
 p {
@@ -124,12 +124,25 @@ p {
 	background: #182c33;
 }
 .logo {
+
+}
+.img-logo {
+	float: left;
+	width: 317px;
+	height: 62px;
+	margin-right: .5em;
+	background: url(../img/logo.jpg) no-repeat  0 0;
+}
+/*
+Текстовий логотип - !нужна доработка кроссбраузерности
+.logo {
 	font-family: TheSerifYotaW5Plain, sans-serif;
 	font-size: 2em;
 	font-weight: bold;
 	line-height: 56px;
 	background: linear-gradient(#fff, #a3bfc1);
 	-webkit-background-clip: text;
+	   -moz-background-clip: text;
 	color: transparent;
 	float: left;
 }
@@ -143,6 +156,7 @@ p {
 	margin-right: .5em;
 	background: url(../img/logo.png) no-repeat  0 0;
 }
+*/
 .top-menu {
 	display: inline-block;
 	float: right;
@@ -160,7 +174,7 @@ p {
 }
 .top-menu ul li a:hover, .top-menu ul li a.active {
     text-decoration: none;
-    border-radius: 1.5em;
+    border-radius: 1.2em;
     background-color: #213942;
     color: #ffba3c;
 }
@@ -266,14 +280,130 @@ main p img {
 	background: url(../img/comments.png) no-repeat 0 0;
 }
 
-/* КОМЕНТАРИИ */
+.title-comments {
+	padding: 1em 0;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #cad3dc;
+}
+a.btm {
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #333333;
+	padding: .7em 2em;
+	border-radius: 1.5em;
+	background: #ffde4a;
+	text-decoration: none;
+	background: -moz-linear-gradient(top, #ffde4a 0%, #ffb522 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffde4a), color-stop(100%,#ffb522));
+	background: -webkit-linear-gradient(top, #ffde4a 0%,#ffb522 100%);
+	background: -o-linear-gradient(top, #ffde4a 0%,#ffb522 100%);
+	background: -ms-linear-gradient(top, #ffde4a 0%,#ffb522 100%);
+	background: linear-gradient(to bottom, #ffde4a 0%,#ffb522 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffde4a', endColorstr='#ffb522',GradientType=0 );
+	box-shadow: 0px -1px 2px 0px #000000 inset;
+	box-shadow: 0px 1px 3px 0px #000000;
+}
+a.btm:hover, a.btm:focus, a.btm:active {
+	text-decoration: none;
+	transform-origin: center bottom;
+	transform: scale(1.02);
+	color: #171717;
+}
+.list-comments {
+	margin: 1em 0 2em;
+	color: #303030;
+}
+.list-comments ul {
+	display: block;
+	list-style:none;
+}
+.list-comments ul li ul {
+	display: block;
+	margin-left: 1.875em;
+    /*-webkit-padding-start: 1.875em;*/
+}
+.list-comments li.answer li {
+	position: relative;
+}
+.list-comments .answer li:not(.answer):after {
+	content: "";
+	position: absolute;
+	left: -26px;
+	top: 10px;
+	width: 18px;
+	height: 12px;
+	background: url(../img/arrow.png) no-repeat 0 0;
+}
+.list-comments li:not(.answer) {
+	max-width: 100%;
+	background: #fff;
+	border: 1px solid #e0e3e7;
+	padding: 1em;
+	margin: .6em 0;
+}
+.list-comments .author {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.3em;
+}
+.list-comments .author div {
+	float: right;
+	font-size: 0.875em;
+	font-weight: normal;
+}
+.list-comments .author span.comment-date {
+	color: #999999;
+	
+}
+.list-comments .author span.comment-reply {
+	display: none;
+}
+.list-comments li:hover>.author>div>span.comment-reply {
+	display: inline-block;
+}
+.list-comments .author span.comment-reply a {
+	color: #0067a6;
+	margin-right: 0.75em;
+	background: url(../img/comment-reply.png) no-repeat 0 3px;
+	padding-left: 1.3em;
+}
+.list-comments .author span.comment-reply a:hover {
+	text-decoration: none;
+}
+.list-comments .comment-msg {
+	color: #4e4e4e;
+}
+
+.wrap-pagenavi {
+	margin: 1.5em 0;
+    text-align: center;
+}
+.wrap-pagenavi a, .wrap-pagenavi span {
+	margin: 0 .2em;
+	padding: .5em 1em;
+}
+.wrap-pagenavi a {
+	border: 1px solid #e1e9ef;
+	color: #217ab2;
+}
+.wrap-pagenavi span {
+	border: 1px solid #337e99;
+	background: #337e99;
+	color: #fff;
+	box-shadow: 0px 0px 1px 0px #000000;
+}
 
 aside {
 	float: right;
 	width: 21%;
+	padding-top : 1.8em;
 }
 aside .widget {
 	margin-bottom: 2em;
+}
+aside .button-social {
+	text-align: center;
 }
 .fb-widget img {
 	width: 100%;
@@ -305,6 +435,7 @@ footer {
 	padding: 4.5em 4.5em 4.5em 0;
 	overflow: hidden;
 	text-align: center;
+	margin-top: 2em;
 }
 footer .copyright {
 	float: left;
