@@ -304,6 +304,7 @@ footer {
 	background: #fff;
 	padding: 4.5em 4.5em 4.5em 0;
 	overflow: hidden;
+	text-align: center;
 }
 footer .copyright {
 	float: left;
@@ -336,5 +337,39 @@ footer .pay_systems a:first-child {
 		text-align: center;}
 	.top-menu ul li {
 		float: none;
+	}
+	footer {
+		padding: 3em .5em;
+	}
+	footer .skype {
+		margin-left: 14%;
+	}
+	footer .pay_systems {
+		float: right;
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 600px) {
+	aside {
+		float: none;
+		width: 100%;
+	}
+	main, aside .widget {
+		width: 100%;
+		float: none;
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+	main p img {
+		margin-left: 0;
+	}
+	.public .img_public {
+		margin-left: 0;
+	}
+	footer .copyright,
+	footer .skype,
+	footer .pay_systems {
+		float: none;
+		margin: 1.5em auto;
 	}
 }
